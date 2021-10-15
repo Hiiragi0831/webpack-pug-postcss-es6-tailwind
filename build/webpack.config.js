@@ -74,6 +74,7 @@ module.exports = (env) => {
                 sourceMap: true,
               },
             },
+            'postcss-loader',
           ],
         },
         {
