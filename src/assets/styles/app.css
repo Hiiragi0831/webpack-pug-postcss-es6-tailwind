@@ -1,0 +1,17 @@
+/* Add tailwindcss */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Base*/
+@import "base/fonts.pcss";
+@import "layout/general.pcss";
+
+/* Components */
+@import "components/buttons.pcss";
+@import "components/header.pcss";
+@import "components/footer.pcss";
+
+/* Pages */
+@import "pages/main.pcss";
+

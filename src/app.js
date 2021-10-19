@@ -1,10 +1,8 @@
 /* src/app.js */
 
 // Styles
-import 'styles/_app.scss'
+import 'styles/app.css'
 
-$(function() {
-  console.log('Ready!')
+console.log('Ready!')
 
-  require('scripts/demo')
-})
+require('scripts/demo')

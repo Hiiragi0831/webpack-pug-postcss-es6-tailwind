@@ -78,15 +78,6 @@ module.exports = (env) => {
           ],
         },
         {
-          test: /\.scss$/,
-          use: [
-            utils.isDevMode(MODE) ? 'style-loader' : MiniCssExtractPlugin.loader, // creates style nodes from JS strings
-            { loader: 'css-loader', options: { importLoaders: 1, sourceMap: true } }, // translates CSS into CommonJS
-            'postcss-loader',
-            'sass-loader', // compiles Sass to CSS
-          ],
-        },
-        {
           test: /\.pug$/,
           use: [
             {
@@ -147,11 +138,9 @@ module.exports = (env) => {
     plugins: [
       new CopyWebpackPlugin({
         patterns: [
+          { from: './src/assets/images', to: 'images' },
           { from: '../manifest.json', to: 'manifest.json' },
           { from: '../browserconfig.xml', to: 'browserconfig.xml' },
-          { from: 'assets/images/favicons/android-chrome-192x192.png', to: 'assets/images/android-chrome-192x192.png' },
-          { from: 'assets/images/favicons/android-chrome-256x256.png', to: 'assets/images/android-chrome-256x256.png' },
-          { from: 'assets/images/favicons/mstile-150x150.png', to: 'assets/images/mstile-150x150.png' }
         ]
       }),
       new MiniCssExtractPlugin({
@@ -175,15 +164,9 @@ module.exports = (env) => {
       ...utils.pages(MODE), // mode
       ...utils.pages(MODE, 'blog'), // mode, folder name under pages
 
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.$': 'jquery',
-        'window.jQuery': 'jquery'
-      }),
       new WebpackNotifierPlugin({
         title: 'Your project'
-      })
-    ]
+      }),
+    ],
   }
 }
