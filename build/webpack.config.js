@@ -45,7 +45,7 @@ module.exports = (env) => {
       extensions: ['.js'],
       alias: {
         source: path.join(__dirname, '../src'), // Relative path of src
-        images: path.join(__dirname, '../src/assets/images'), // Relative path of images
+        // images: path.join(__dirname, '../src/assets/images'), // Relative path of images
         fonts: path.join(__dirname, '../src/assets/fonts'), // Relative path of fonts
       }
     },
@@ -83,16 +83,19 @@ module.exports = (env) => {
           test: /\.pug$/,
           use: [
             {
-              loader: 'pug-loader'
+              loader: 'pug-loader',
+              options: {
+                pretty: true
+              }
             }
           ]
         },
         {
           test: /\.(png|jpe?g|gif|svg|ico)(\?.*)?$/,
           type: 'asset/resource',
-          generator: {
-            filename: 'assets/images/[name].[contenthash:7][ext]'
-          }
+          // generator: {
+          //   filename: 'assets/images/[name].[contenthash:7][ext]'
+          // }
         },
         {
           test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
@@ -140,7 +143,7 @@ module.exports = (env) => {
     plugins: [
       new CopyWebpackPlugin({
         patterns: [
-          { from: '../src/assets/images', to: 'images' },
+          { from: '../src/assets/images', to: 'assets/images' },
           { from: '../manifest.json', to: 'manifest.json' },
           { from: '../browserconfig.xml', to: 'browserconfig.xml' },
         ]
@@ -156,7 +159,7 @@ module.exports = (env) => {
 
       // Homepage
       new HtmlWebpackPlugin({
-        minify: !utils.isDevMode(MODE),
+        minify: false,
         filename: 'index.html',
         template: 'views/index.pug',
         inject: 'body',
