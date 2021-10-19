@@ -35,7 +35,9 @@ module.exports = (env) => {
       filename: 'assets/js/[name].[contenthash:7].bundle.js'
     },
     devServer: {
-      static: path.join(__dirname, '../src'),
+      static: {
+        directory: path.join(__dirname, '../src'),
+      },
       compress: true,
       open: true
     },
