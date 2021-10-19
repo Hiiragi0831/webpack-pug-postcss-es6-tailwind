@@ -1,11 +1,15 @@
-@layer components {
-  .btn-blue {
-    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
-  }
+.clean-button {
+  border: none;
+  background: none;
 }
 
-
-.btn {
-  @apply px-4 py-2 rounded font-semibold bg-gray-200 text-black;
+.button {
+  @extend .clean-button;
+  font-family: $quicksand;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 5px;
+  color: white;
+  padding: 14px 40px;
+  background: $lightseagreen;
 }
-

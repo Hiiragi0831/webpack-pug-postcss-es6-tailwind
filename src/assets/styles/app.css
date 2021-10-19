@@ -3,15 +3,21 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-/* Base*/
+/* Base */
 @import "base/fonts.pcss";
-@import "layout/general.pcss";
+
+/* Utils */
+@import 'utils/colors.pcss';
+@import 'utils/mixins.pcss';
 
 /* Components */
-@import "components/buttons.pcss";
-@import "components/header.pcss";
 @import "components/footer.pcss";
+@import "components/buttons.pcss";
+@import "components/link.pcss";
+@import "components/menu.pcss";
+
+/* Layout */
+@import 'layout/general.pcss';
 
 /* Pages */
 @import "pages/main.pcss";
-

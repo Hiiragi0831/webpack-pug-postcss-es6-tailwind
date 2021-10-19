@@ -1,9 +1,10 @@
 module.exports = {
   mode: 'jit',
   purge: {
-    enabled: 'webpack --mode=development',
+    enabled: 'webpack --mode=production',
     content: [
-      './src/views/*.pug'
+      './src/views/*.pug',
+      './src/views/blog/*.pug'
     ]
   },
   darkMode: false, // or 'media' or 'class'
