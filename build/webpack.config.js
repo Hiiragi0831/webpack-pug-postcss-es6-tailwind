@@ -35,7 +35,7 @@ module.exports = (env) => {
       filename: 'assets/js/[name].[contenthash:7].bundle.js'
     },
     devServer: {
-      contentBase: path.join(__dirname, '../src'),
+      static: path.join(__dirname, '../src'),
       compress: true,
       open: true
     },
@@ -138,7 +138,7 @@ module.exports = (env) => {
     plugins: [
       new CopyWebpackPlugin({
         patterns: [
-          { from: './src/assets/images', to: 'images' },
+          { from: '../src/assets/images', to: 'images' },
           { from: '../manifest.json', to: 'manifest.json' },
           { from: '../browserconfig.xml', to: 'browserconfig.xml' },
         ]
