@@ -4,17 +4,26 @@ module.exports = {
     enabled: 'webpack --mode=production',
     content: [
       './src/views/*.pug',
-      './src/views/blog/*.pug'
+      './src/views/*/*.pug',
     ]
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
     extend: {
       colors: {
-        'primary-color': 'var(--primary-color)',
-        'text-color': 'var(--text-color)',
-        'accent-color': 'var(--accent-color)',
-        'color-color': 'var(--bg-color)'
+        cyan: '#9cdbff',
+        'lightseagreen': '#29c59c',
+        'darkslategray': '#1f273e',
+      },
+      spacing: {
+        '96': '24rem',
+        '128': '32rem',
       }
     }
   },

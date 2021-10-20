@@ -1,19 +1,13 @@
-.footer {
-  background: $lightseagreen;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 320px;
-  padding: 10px;
-  border-top-left-radius: 5px;
-  text-align: center;
-  p {
-    font-size: 12px;
-  }
-  a {
-    font-family: inherit;
-    font-size: 15px;
-    font-weight: bold;
-    color: inherit;
+@layer components {
+  .footer {
+    @apply fixed bottom-0 right-0 p-2 text-center w-96 bg-lightseagreen;
+
+    p {
+      @apply text-xs;
+    }
+
+    a {
+      @apply text-sm font-bold;
+    }
   }
 }

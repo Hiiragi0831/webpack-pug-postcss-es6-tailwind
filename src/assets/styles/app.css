@@ -7,8 +7,8 @@
 @import "base/fonts.pcss";
 
 /* Utils */
-@import 'utils/colors.pcss';
-@import 'utils/mixins.pcss';
+@import "utils/colors.pcss";
+@import "utils/mixins.pcss";
 
 /* Components */
 @import "components/footer.pcss";
@@ -17,7 +17,7 @@
 @import "components/menu.pcss";
 
 /* Layout */
-@import 'layout/general.pcss';
+@import "layout/general.pcss";
 
 /* Pages */
 @import "pages/main.pcss";
