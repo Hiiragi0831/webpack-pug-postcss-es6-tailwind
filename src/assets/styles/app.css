@@ -7,7 +7,7 @@
 @import "base/fonts.pcss";
 
 /* Utils */
-@import "utils/colors.pcss";
+@import "utils/utilities.pcss";
 @import "utils/mixins.pcss";
 
 /* Components */

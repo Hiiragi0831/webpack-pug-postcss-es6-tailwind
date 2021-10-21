@@ -25,6 +25,9 @@ module.exports = {
         '96': '24rem',
         '128': '32rem',
       }
+    },
+    fontFamily: {
+      'quicksand': 'Quicksand, Helvetica, Arial, sans-serif',
     }
   },
   variants: {

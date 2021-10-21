@@ -1,24 +1,24 @@
-.menu {
-  position: fixed;
-  top: 0;
-  color: white;
-  width: 100%;
-  padding: 15px;
-}
-.menu__ul {
-  @mixin isFlex center, flex-start;
-}
-.menu__item {
-  & + .menu__item {
-    margin-left: 20px;
+@layer components {
+  .menu {
+    @apply fixed top-0 text-white w-full p-4;
   }
-}
-.menu__link {
-  color: white;
-  border-bottom: 2px solid transparent;
-  font-size: 15px;
-  &:hover,
-  &.active {
-    border-color: white;
+
+  .menu__ul {
+    @apply flex items-center justify-start flex-row flex-wrap;
+  }
+
+  .menu__item {
+    & + .menu__item {
+      @apply ml-5;
+    }
+  }
+
+  .menu__link {
+    @apply text-white text-sm border-b-2 border-transparent;
+
+    &:hover,
+    &.active {
+      @apply border-white;
+    }
   }
 }

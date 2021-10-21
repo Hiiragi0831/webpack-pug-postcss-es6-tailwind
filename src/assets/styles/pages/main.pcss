@@ -1,14 +1,13 @@
-.page {
-  flex: 1;
-  max-width: 400px;
-  background: $lightseagreen;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 10px 10px 0 1px rgba(255, 255, 255, 0.25), 20px 20px 0 1px rgba(255, 255, 255, 0.15);
-  p {
-    margin-top: 20px;
+@layer components {
+  .page {
+    @apply p-5 rounded flex-1 max-w-sm bg-lightseagreen shadow-tree;
+
+    p {
+      @apply mt-5;
+    }
   }
-}
-.page__title {
-  margin: 0;
+
+  .page__title {
+    @apply m-0;
+  }
 }

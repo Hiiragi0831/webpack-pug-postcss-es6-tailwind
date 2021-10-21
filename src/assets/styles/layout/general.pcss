@@ -1,39 +1,40 @@
-* {
-  box-sizing: border-box;
-  outline: none;
-}
-html,
-body {
-  height: 100%;
-}
-body {
-  @mixin isFlex center, center;
-  font-family: $quicksand;
-  background: $darkslategray;
-  color: white;
-  margin: 0;
-  padding: 0;
-}
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
-a {
-  text-decoration: none;
-  &:visited {
-    color: white;
+@layer base {
+  html,
+  body {
+    @apply h-full;
+  }
+
+  body {
+    @apply text-white font-quicksand bg-darkslategray m-0 p-0 flex items-center justify-center flex-row flex-wrap;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply m-0;
+  }
+
+  a {
+    @apply no-underline;
+
+    &:visited {
+      @apply text-white;
+    }
+  }
+
+  p {
+    @apply m-0;
+  }
+
+  ul {
+    @apply m-0 p-0;
+  }
+
+  li {
+    @apply list-none;
   }
 }
-p {
-  margin: 0;
-}
-ul {
-  margin: 0;
-  padding: 0;
-}
-li {
-  list-style: none;
-}
 
-.image {
-  width: 50px;
+@layer components {
+  .image {
+    @apply w-12;
+  }
 }

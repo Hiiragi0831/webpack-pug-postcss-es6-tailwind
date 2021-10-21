@@ -1,15 +1,10 @@
-.clean-button {
-  border: none;
-  background: none;
-}
+@layer components {
+  .clean-button {
+    @apply border-none bg-none;
+  }
 
-.button {
-  @extend .clean-button;
-  font-family: $quicksand;
-  font-size: 18px;
-  font-weight: 700;
-  border-radius: 5px;
-  color: white;
-  padding: 14px 40px;
-  background: $lightseagreen;
+  .button {
+    @extend .clean-button;
+    @apply font-quicksand text-lg font-bold rounded text-white bg-lightseagreen pt-3 pl-10 pb-3 pr-10;
+  }
 }
